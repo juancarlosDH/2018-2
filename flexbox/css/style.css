@@ -1,0 +1,60 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+
+.container{
+
+}
+
+.container div{
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.header{
+  background-color: rgba(23,56,32, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+div.main{
+  background-color: rgba(170, 130, 185, 0.9);
+  min-height: 100vh;
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.primero{
+  flex: 80%;
+}
+
+.segundo{
+  background-color: yellow;
+  min-height: 300px;
+}
+.tercero{
+  background-color: lightblue;
+  min-height: 400px;
+}
+.cuarto{
+  background-color: aquamarine;
+  min-height: 350px;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+}
+footer a{
+  padding:5px;
+  text-align: center;
+}

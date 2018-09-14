@@ -1,0 +1,109 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Modern Antiqua', cursive;
+}
+body{
+  background-color: #000;
+}
+
+ul{
+  list-style: none;
+  display: flex
+}
+li{
+  margin: 0 10px;
+}
+
+h1, h2{
+  margin: 10px 0;
+}
+
+#logo{
+  width: 250px;
+}
+
+.centrar{
+  text-align: center;
+}
+
+#redes img{
+  width: 30px;
+}
+
+.contenedor-principal{
+  background-color: #ccc;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  border-right: 10px solid #505050;
+  border-left: 10px solid #505050;
+}
+
+
+.contenedor-pelis img.poster{
+  height: 150px;
+  border-radius: 10px;
+}
+
+.contenedor-pelis{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contenedor-pelis .items{
+  width: 32%;
+  margin: 10px 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  background-color: rgba(174, 190, 214, 0.5);
+}
+
+.contenedor-pelis .items:hover{
+  background-color: rgba(174, 190, 214, 0.8);
+}
+
+.contenedor-pelis .detalle{
+  position: relative;
+  display: inline;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 0;
+  margin-left: 10px;
+  background-color: rgba(0,0,0, 0.08);
+}
+.detalle label{
+    display: block;
+}
+
+
+.estreno, .tresd, .taquillera{
+  position: absolute;
+  width: 50px;
+}
+
+.estreno{
+  bottom: 0;
+  right: 0;
+}
+
+.tresd{
+  top: 5px;
+  right: 5px;
+}
+
+.taquillera{
+  display: none;
+  bottom: 2px;
+  right: 60px;
+}
+
+img.ranking{
+  width: 20px;
+  cursor: pointer;
+}

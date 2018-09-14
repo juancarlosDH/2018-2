@@ -1,0 +1,23 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+header nav{
+  background-color: lightblue;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-height: 200px;
+  align-items: flex-start;
+}
+
+nav ul li{
+  border: 1px solid black;
+  padding: 3px 20px;
+}

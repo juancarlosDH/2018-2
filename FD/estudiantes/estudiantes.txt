@@ -1,0 +1,10 @@
+Array
+(
+    [0] => Array
+        (
+            [nombre] => pedro
+            [dni] => 12345678
+            [foto] => fotos/12345678.jpg
+        )
+
+)
