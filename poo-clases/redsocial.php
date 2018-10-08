@@ -39,7 +39,7 @@ $primerPost->setRuta($_FILES['archivo']['name']);
 echo $primerPost->crear();
 
 $primerPost->compartir($usuarioLogueado, $usuAmigo);
-die;
+
  ?>
 
 <!DOCTYPE html>
