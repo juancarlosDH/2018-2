@@ -1,14 +1,7 @@
-<pre>
 <?php
-
-$dsn = 'mysql:host=localhost;dbname=movies_db';
-$user = 'juancarlos';
-$pass = '123456';
-$opt= [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ];
+require_once('../conex.php');
 
 try{
-
-    $conex = new PDO($dsn, $user, $pass, $opt);
 
     $query = $conex->query('SELECT * FROM movies WHERE title = "titanic"');
 

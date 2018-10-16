@@ -1,20 +1,16 @@
 <?php
-
-$dsn = 'mysql:host=localhost;dbname=movies_db';
-$user = 'juancarlos';
-$pass = '123456';
-$opt= [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ];
-
+require_once('../conex.php');
 try{
 
-    $conex = new PDO($dsn, $user, $pass, $opt);
-
-    $query = $conex->query('SELECT title FROM movies');
-
+    //ejecuto el query para traerme las pelis
+    $query = $conex->query('SELECT movies.id, title, name AS genre_name
+         FROM movies
+        LEFT JOIN genres ON movies.genre_id = genres.id');
+    //obtengo las pelis
     $peliculas = $query->fetchAll(PDO::FETCH_ASSOC);
+    //echo '<pre>';print_r($peliculas);die;
+    //obtengo la cantidad de pelis
     $cantidad = $query->rowCount();
-
-    // var_dump($peliculas);
 
 }catch( PDOException $ex ){
     // echo 'Error con la BD, contacta con el administrador del sistema';
@@ -32,7 +28,11 @@ try{
         <?php
 
          foreach ($peliculas as $peli) {
-            echo '<a href="">'.$peli['title'] .'</a><br>';
+
+            if(empty($peli['genre_name'])) { $peli['genre_name'] = 'sin genero';}
+
+            echo '<a href="">'.utf8_encode($peli['title']) .' ('.$peli['genre_name'].')</a><br>';
+
         }
 
         ?>
