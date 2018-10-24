@@ -2,36 +2,22 @@
 
 <?php
 
-require_once('../conex.php');
+require_once('../autoload.php');
 
 $talles = ['xs', 's', 'm', 'l', 'xl'];
 $colores = [ 'rojo', 'azul', 'verde'];
 
 if($_POST){
     //var_dump($_POST);
-    try {
-        $query = $conex->prepare(
-            'INSERT INTO remeras(talle, color ,sexo) VALUES (:talle, :color, :sexo)'
-        );
 
-        $query->bindValue(':talle', $_POST['talle']);
-        $query->bindValue(':color', $_POST['color']);
-        $query->bindValue(':sexo', $_POST['sexo']);
+    $base = new BD();
+    $seGuardo = $base->guardarRemera( $_POST );
 
-        $query->execute();
-
+    if($seGuardo){
         header('location:listado.php');
-
-    } catch (PDOException $ex) {
-
-        //echo 'Error al insertar:'. $ex->getMessage();
-        echo 'Error al registrar en la BD';
-
+    }else{
+        echo 'No se pudo registrar en la BD, contacte al administrador del sistema :(';
     }
-
-
-
-
 }
 
  ?>

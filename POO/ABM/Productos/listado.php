@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 
 <?php
-require_once('../conex.php');
+require_once('../autoload.php');
 
-$traerRemeras = $conex->query('SELECT * FROM remeras');
-$todasLasRemeras = $traerRemeras->fetchAll(PDO::FETCH_ASSOC);
+$base = new BD();
+$todasLasRemeras = $base->listarRemeras();
+
+// $traerRemeras = $conex->query('SELECT * FROM remeras');
+// $todasLasRemeras = $traerRemeras->fetchAll(PDO::FETCH_ASSOC);
 
 
  ?>
